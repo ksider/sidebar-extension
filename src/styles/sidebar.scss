@@ -1,0 +1,18 @@
+@use 'variables';
+@use 'components';
+
+* { box-sizing: border-box; }
+html, body { min-width: 250px; min-height: 100%; margin: 0; }
+body { overflow: hidden; color: var(--text); background: var(--bg); font-family: var(--font); }
+.app { display: grid; grid-template-rows: auto auto minmax(0, 1fr) auto; height: 100vh; max-width: 350px; background: var(--surface); }
+.header { display: grid; gap: 10px; padding: 10px 10px 0; background: var(--surface); }
+.brand { display: flex; align-items: center; gap: 9px; height: 26px; }
+.brand-mark { display: grid; place-items: center; flex: 0 0 24px; width: 24px; height: 24px; border: 1px solid var(--text); border-radius: 7px; color: var(--text); }
+.brand-mark svg { width: 16px; height: 16px; }
+h1 { margin: 0; font-size: 13px; line-height: 1.2; font-weight: 700; letter-spacing: -.01em; }
+.local-hint { margin-left: auto; padding: 2px 5px; border: 1px solid var(--border); border-radius: 4px; color: var(--faint); font-size: 10px; }
+.extension-list { min-height: 0; overflow-y: auto; background: var(--surface); }
+.footer { display: flex; align-items: center; justify-content: space-between; padding: 9px 12px; border-top: 1px solid var(--border); color: var(--muted); background: var(--surface); font-size: 11px; }
+.local-mode { display: flex; align-items: center; gap: 5px; }
+.local-mode::before { width: 6px; height: 6px; border-radius: 50%; background: var(--accent); content: ''; }
+.visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; clip-path: inset(50%); }
